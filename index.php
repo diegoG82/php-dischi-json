@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- CSS custom -->
     <link rel="stylesheet" href="./css/style.css" />
-    </head>
+</head>
 
 </head>
 
@@ -28,11 +28,13 @@
         <div class="header">
             <div class="navigation"><img src="./img/logo.png" alt=""></div>
         </div>
-       
+
 
         <div class="container mt-4">
             <div class="row row-cols-3">
-                <div class="col" v-for="(album, index) in albums" :key="index">
+
+                <div class="col" v-for="(album, index) in albums" :key="index" @click="showDetails(index)">
+
                     <div class="card d-flex text-center align-items-center mb-4 p-4">
                         <img :src="album.poster" alt="">
                         <h4 class="title mt-4">{{album.title}}</h4>
@@ -41,9 +43,24 @@
                         <p class="album_genre">{{album.gen}}</p>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            <div class="discstats text-center" v-if="selectedAlbum"  @click="showDetails(index)" >
+
+                <img :src="selectedAlbum.poster" alt="">
+                <h4 class="title mt-4" >{{selectedAlbum.title}}</h4>
+                <p> {{selectedAlbum.author}}</p>
+                <p> {{selectedAlbum.year}}</p>
+                <p> {{selectedAlbum.genre}}</p>
+            </div>
         </div>
+
+
+
+
+
+
+
 
 
 
