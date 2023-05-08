@@ -47,22 +47,13 @@
             </div>
             <div class="discstats text-center" v-if="selectedAlbum"  @click="showDetails(index)" >
 
-                <img :src="selectedAlbum.poster" alt="">
+                <img class="mt-4" :src="selectedAlbum.poster" alt="">
                 <h4 class="title mt-4" >{{selectedAlbum.title}}</h4>
                 <p> {{selectedAlbum.author}}</p>
                 <p> {{selectedAlbum.year}}</p>
-                <p> {{selectedAlbum.genre}}</p>
+                
             </div>
         </div>
-
-
-
-
-
-
-
-
-
 
     </div>
 
