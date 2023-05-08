@@ -1,0 +1,21 @@
+#app {
+  background-color: rgb(29, 45, 60);
+}
+
+.header {
+  background-color: rgb(6, 19, 31);
+  height: 80px;
+}
+
+.navigation {
+  width: 80%;
+}
+
+.card {
+  background-color: rgb(6, 19, 31);
+  color: white;
+}
+
+.card img {
+  width: 70%;
+}

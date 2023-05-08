@@ -16,19 +16,26 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CSS custom -->
+    <link rel="stylesheet" href="./css/style.css" />
+    </head>
 
 </head>
 
 <body>
     <div id="app">
+
+        <div class="header">
+            <div class="navigation"><img src="./img/logo.png" alt=""></div>
+        </div>
        
 
-        <div class="container">
+        <div class="container mt-4">
             <div class="row row-cols-3">
                 <div class="col" v-for="(album, index) in albums" :key="index">
-                    <div class="card d-flex text-center">
+                    <div class="card d-flex text-center align-items-center mb-4 p-4">
                         <img :src="album.poster" alt="">
-                        <h6 class="title">{{album.title}}</h6>
+                        <h4 class="title mt-4">{{album.title}}</h4>
                         <p class="author">{{album.author}}</p>
                         <p class="album-year">{{album.year}}</p>
                         <p class="album_genre">{{album.gen}}</p>

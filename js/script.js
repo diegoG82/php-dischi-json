@@ -13,7 +13,6 @@ mounted(){
     .get("http://localhost:8888/boolean/php-dischi-json/server.php")
     .then((resp) => {
        this.albums = resp.data.results;
-    console.log(resp);
     });
 },
 
